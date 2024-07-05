@@ -9,7 +9,7 @@ const MyJob = () => {
   const perPageItem = 4;
   useEffect(() => {
     setLoading(true);
-    fetch("https://localhost:3000/my-jobs/:email")
+    fetch("https://job-search-backend-p73z.onrender.com/my-jobs/:email")
       .then((res) => res.json())
       .then((data) => {
         setJobs(data);
@@ -18,7 +18,7 @@ const MyJob = () => {
   }, [searchText]);
 
   const handleDelete = (id) => {
-    fetch("https://localhost:3000/delete-job/:id", {
+    fetch("https://job-search-backend-p73z.onrender.com/delete-job/:id", {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: id }),
