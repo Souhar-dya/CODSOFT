@@ -27,12 +27,17 @@ const router = createBrowserRouter([
         path: "/edit-job/:id",
         element: <UpdateJob />,
         loader: ({ useParams }) => {
-          fetch(`https://job-search-backend-p73z.onrender.com/all-jobs/${params.id}`);
+          fetch(
+            `https://job-search-frontend.onrender.com/all-jobs/${params.id}`
+          );
         },
       },
     ],
   },
-  
+  {
+    path: "/login",
+    element: <LoginPage />,
+  },
 ]);
 
 export default router;
