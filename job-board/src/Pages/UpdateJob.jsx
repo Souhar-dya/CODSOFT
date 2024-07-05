@@ -36,7 +36,7 @@ const UpdateJob = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch(`http://localhost:3000/update-job/${id}`, {
+    fetch(`https://job-search-backend-p73z.onrender.com/update-job/${id}`, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
