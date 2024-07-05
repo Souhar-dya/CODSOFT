@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("http://localhost:3000/all-jobs", {
+    fetch("https://job-search-backend-p73z.onrender.com/all-jobs", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
