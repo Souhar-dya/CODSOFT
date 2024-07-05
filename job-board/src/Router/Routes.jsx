@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         path: "/edit-job/:id",
         element: <UpdateJob />,
         loader: ({ useParams }) => {
-          fetch(`http://localhost:3000/all-jobs/${params.id}`);
+          fetch(`https://job-search-backend-p73z.onrender.com/all-jobs/${params.id}`);
         },
       },
     ],
