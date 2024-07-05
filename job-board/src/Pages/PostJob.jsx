@@ -18,7 +18,7 @@ const PostJob = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    fetch("http://localhost:3000/post-job", {
+    fetch("https://job-search-backend-p73z.onrender.com/post-job", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
